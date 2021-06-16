@@ -15,7 +15,7 @@ const Tile = ({tile}) =>{
 
     if(tile.hasMoved()){
         classArr.push(`row_from_${tile.fromRow()}_to_${tile.toRow()}`);
-        classArr.push(`row_from_${tile.fromColumn()}_to_${tile.toColumn()}`); 
+        classArr.push(`column_from_${tile.fromColumn()}_to_${tile.toColumn()}`); 
         classArr.push('isMoving');
     }
 
