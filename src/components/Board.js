@@ -2,9 +2,13 @@ import React, {useState} from "react";
 import Tile from "./Tile"
 import Cell from "./Cell"; 
 import {Board} from "../helper"
+import useEvent from "../hooks/useEvent";
 
 const BoardView = () =>{
     const [board, setBoard] = useState(new Board());
+    useEvent("keydown", ()=>{
+        alert("Hey");
+    })
     const cells = board.cells.map((row, rowIndex)=>{
         return(
             <div key={rowIndex}>
@@ -18,7 +22,10 @@ const BoardView = () =>{
                         .map((tile, indexTile)=>{
                     return <Tile tile={tile} key={indexTile}/>;
                 });
-    return <div className="board">{cells}{tiles}</div>
+    return <div>
+       
+        <div className="board">{cells}{tiles}</div>
+    </div>
 };
 
 export default BoardView;
