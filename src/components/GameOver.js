@@ -13,12 +13,6 @@ const GameFinished = ({onRestart, board}) => {
             alt="Uh, you always can try again!"/>
             </div>;
     }
-    return (
-         <div className="gameOver">
-             <img style={styles.tryAgainStyle}
-            src={TryAgainLogo} 
-            alt="Uh, you always can try again!"/>
-         </div>
-    );
+    return null;
 }
 export default GameFinished;
