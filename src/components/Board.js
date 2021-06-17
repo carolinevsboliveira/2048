@@ -4,23 +4,29 @@ import Cell from "./Cell";
 import {Board} from "../helper"
 import useEvent from "../hooks/useEvent";
 import { FaRedoAlt } from "react-icons/fa";
+import GameFinished from "./GameOver";
 
 const BoardView = () =>{
     
     const [board, setBoard] = useState(new Board());
     
-    const handleKeyDown = (event)=>{
-        if(board.hasWon()) return;
-        if(event.keyCode >= 37 && event.keyCode <= 40){
-            let direction = event.keyCode -37;
+    function returnMovimentOnBoard(value){
+        let direction = value -37;
             let boardClone = Object.assign(Object.create(Object.getPrototypeOf(board)), board)
             let newBoard = boardClone.move(direction);
             setBoard(newBoard);
+    }
+
+    const handleKeyDown = (event)=>{
+        if(board.hasWon()) return;
+        if(event.keyCode >= 37 && event.keyCode <= 40){
+            returnMovimentOnBoard(event.keyCode)
         }
     }
+    
+
     useEvent("keydown", handleKeyDown)
 
-    
     const cells = board.cells.map((row, rowIndex)=>{
         return(
             <div key={rowIndex}>
@@ -46,7 +52,8 @@ const BoardView = () =>{
                <div>{board.score}</div>
            </div>
        </div>
-        <div className="board">{cells}{tiles}</div>
+        <div className="board">{cells}{tiles}<GameFinished onRestart={resetGame} board={board}/></div>
+        
     </div>
 };
 
