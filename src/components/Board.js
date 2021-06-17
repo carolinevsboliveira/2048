@@ -5,6 +5,7 @@ import {Board} from "../helper"
 import useEvent from "../hooks/useEvent";
 import { FaRedoAlt,FaArrowUp,FaArrowLeft,FaArrowDown,FaArrowRight } from "react-icons/fa";
 import GameFinished from "./GameOver";
+import Credits from "./Credits";
 
 const BoardView = () =>{
     
@@ -51,7 +52,9 @@ const BoardView = () =>{
     }
     return <div>
        <div className="details-box">
+       <div><Credits/></div>
            <div className="resetButton" onClick={resetGame}><FaRedoAlt/></div>
+           
            <div className="score-box">
                <div className="score-title">Score</div>
                <div>{board.score}</div>
@@ -64,7 +67,7 @@ const BoardView = () =>{
                 <button className="arrows" value="37" onClick={e => handleClick(e.target.value)} ><FaArrowLeft onClick={e => handleClick(37)}/></button>
                 <button className="arrows" value="40" onClick={e => handleClick(e.target.value)} ><FaArrowDown onClick={e => handleClick(40)}/></button>
                 <button className="arrows" value="39" onClick={e => handleClick(e.target.value)} ><FaArrowRight onClick={e => handleClick(39)}/></button>
-                </div>
+            </div>
         </div>
     </div>
 };

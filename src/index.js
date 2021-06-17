@@ -4,7 +4,7 @@ import "./main.scss";
 import "./styles.scss";
 import BoardView from "./components/Board";
 const App = () =>{
-    return <BoardView/>
+    return <div><BoardView/></div>
 }; 
 
 ReactDOM.render(<App />, document.getElementById("root"));

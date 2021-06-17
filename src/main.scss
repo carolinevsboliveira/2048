@@ -41,6 +41,7 @@ button:focus {
   padding-top: 40px;
   width: 440px;
   font-weight: bold;
+  font-family: "Clear Sans", sans-serif;
 }
 
 .board {
@@ -67,7 +68,7 @@ button:focus {
   justify-content: space-between;
 }
 
-.resetButton {
+.resetButton, .creditButton {
   background-color: #3d2963;
   color: #fff;
   cursor: pointer;
@@ -219,10 +220,13 @@ button:focus {
   cursor: pointer;
 }
 
-.arrowsBox{
+.arrowsBox, .creditBox{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.creditElement{
+  padding: 4%;
 }
 @keyframes newTile {
   from {
