@@ -3,6 +3,7 @@ import Tile from "./Tile"
 import Cell from "./Cell"; 
 import {Board} from "../helper"
 import useEvent from "../hooks/useEvent";
+import { FaRedoAlt } from "react-icons/fa";
 
 const BoardView = () =>{
     
@@ -33,8 +34,18 @@ const BoardView = () =>{
                         .map((tile, indexTile)=>{
                     return <Tile tile={tile} key={indexTile}/>;
                 });
+    
+    const resetGame = ()=>{
+        setBoard(new Board());
+    }
     return <div>
-       
+       <div className="details-box">
+           <div className="resetButton" onClick={resetGame}><FaRedoAlt/></div>
+           <div className="score-box">
+               <div className="score-title">Score</div>
+               <div>{board.score}</div>
+           </div>
+       </div>
         <div className="board">{cells}{tiles}</div>
     </div>
 };
