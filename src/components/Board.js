@@ -3,7 +3,7 @@ import Tile from "./Tile"
 import Cell from "./Cell"; 
 import {Board} from "../helper"
 import useEvent from "../hooks/useEvent";
-import { FaRedoAlt } from "react-icons/fa";
+import { FaRedoAlt,FaArrowUp,FaArrowLeft,FaArrowDown,FaArrowRight } from "react-icons/fa";
 import GameFinished from "./GameOver";
 
 const BoardView = () =>{
@@ -24,7 +24,12 @@ const BoardView = () =>{
         }
     }
     
-
+    const handleClick = (value)=>{
+        if(board.hasWon()) return;
+        if(value >= 37 && value <= 40){
+            returnMovimentOnBoard(value)
+        }
+    }
     useEvent("keydown", handleKeyDown)
 
     const cells = board.cells.map((row, rowIndex)=>{
@@ -53,7 +58,14 @@ const BoardView = () =>{
            </div>
        </div>
         <div className="board">{cells}{tiles}<GameFinished onRestart={resetGame} board={board}/></div>
-        
+        <div className="arrowsBox"><button className="arrows" value="38" onClick={e => handleClick(e.target.value)} ><FaArrowUp onClick={e => handleClick(38)}/></button></div>
+        <div>
+            <div className="arrowsBox">
+                <button className="arrows" value="37" onClick={e => handleClick(e.target.value)} ><FaArrowLeft onClick={e => handleClick(37)}/></button>
+                <button className="arrows" value="40" onClick={e => handleClick(e.target.value)} ><FaArrowDown onClick={e => handleClick(40)}/></button>
+                <button className="arrows" value="39" onClick={e => handleClick(e.target.value)} ><FaArrowRight onClick={e => handleClick(39)}/></button>
+                </div>
+        </div>
     </div>
 };
 
