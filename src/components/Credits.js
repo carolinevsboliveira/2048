@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactCircleModal from 'react-circle-modal'
+import info from './constants/info';
 import { FaQuestion } from "react-icons/fa";
 const Credits = () => {
   return (
@@ -16,13 +17,24 @@ const Credits = () => {
       offsetY={0}
     >
       {(onClick) => (
-        <div style={{ backgroundColor: '#fff', padding: '0.5em' }}>
-          <p className="text">
-            Welcome to 2048
-          </p>
+        <div>
+            <div className="info">
+            <h1 className="text">Welcome to 2048</h1>
+            <h2 className="text">How to play</h2>
+            <p className="text">
+            {info.howToPlay}.
+            </p>
+            <h3 className="text">Credits</h3>
+            <div><a href={info.originalLogicCode} className="text">Original Logic Code</a></div>
+            <div><a href={info.originalImageFiles} className="text">Original gifs source</a></div>
+            <div><a href={info.tutorialLink} className="text">Youtube source tutorial</a></div>
+            <div><a href={info.gitRepo} className="text">Github source code</a></div>
+          </div>
+          <div className="info">
           <button onClick={onClick}>
-            Click here to close modal
+            <p className="goBack">Go back to game ❤</p>
           </button>
+          </div>
         </div>
       )}
     </ReactCircleModal>
