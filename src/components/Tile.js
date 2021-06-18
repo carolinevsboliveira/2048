@@ -1,5 +1,3 @@
-import react from "react";
-
 const Tile = ({tile}) =>{
     let classArr = ['tile'];
     classArr.push('tile'+tile.value); 

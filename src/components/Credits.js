@@ -1,4 +1,4 @@
-import React, {Route, useEffect} from 'react'
+import React from 'react'
 import ReactCircleModal from 'react-circle-modal'
 import info from './constants/info';
 import { FaQuestion } from "react-icons/fa";
@@ -13,7 +13,6 @@ const Credits = () => {
           <FaQuestion/>
         </button>
       )}
-      // Optional fields and their default values
       offsetX={0}
       offsetY={0}
     >
