@@ -2,7 +2,7 @@ import React from 'react'
 import ReactCircleModal from 'react-circle-modal'
 import info from './constants/info';
 import { FaQuestion } from "react-icons/fa";
-import Redirect from "../hooks/useRedirect";
+
 const Credits = () => {
   return (
     <div className="creditBox creditElement">
@@ -22,13 +22,14 @@ const Credits = () => {
             <h1 className="text">Welcome to 2048</h1>
             <h2 className="text">How to play</h2>
             <p className="text">
-            {info.howToPlay}.
+            {info.howToPlay}
             </p>
             <h3 className="text">Credits</h3>
-            <div><Redirect url={info.gitRepo} text={"Project github"}/></div>
-            <div><Redirect url={info.originalImageFiles} text={"Original gifs author"}/></div>
-            <div><Redirect url={info.originalLogicCode} text={"Original logic code"}/></div>
-            <div><Redirect url={info.tutorialLink} text={"Youtube tutorial"}/></div>
+            <p><a href={info.gitRepo} className="link" target="_blank" rel="noreferrer">Project Repo</a></p>
+            <p><a href={info.originalLogicCode} className="link" target="_blank" rel="noreferrer">Original logic code</a></p>
+            <p><a href={info.originalImageFiles} className="link" target="_blank" rel="noreferrer">Original Image files</a></p>
+            <p><a href={info.tutorialLink} className="link" target="_blank" rel="noreferrer">Youtube tutorial</a></p>
+
           <div className="info">
           <button onClick={onClick}>
             <p className="goBack">Go back to game ❤</p>
