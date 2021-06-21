@@ -1,8 +1,8 @@
-# &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 2048 React App
+# &emsp;&emsp;&emsp;&emsp; 2048 React App
 
-## &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; A 2048 game application made with React.
+## &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; A 2048 game application made with React.
 
- &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;<img src="https://i.imgur.com/kOwN12U.gif" width="500" height="319" />
+ &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;<img src="<img src="https://imgur.com/Dc3lhmO.gif" width="500" height="319" />" width="500" height="319" />
 
 ## How to play:
 _Levelskip: 2048 is a game where you combine numbered tiles in order to gain a higher numbered tile. In this game you start with two tiles, the lowest possible number available is two. Then you will play by combining the tiles with the same number to have a tile with the sum of the number on the two tiles. A lot of strategies have been devised in order to obtain the 2048 and be a winner in this game. But others have strived for a greater height. Which is a score beyond 2048. [Read more here](https://levelskip.com/puzzle/How-to-play-2048#:~:text=2048%20is%20a%20game%20where,number%20on%20the%20two%20tiles.)._  
