@@ -1,6 +1,6 @@
-# &emsp;&emsp;&emsp;&emsp; 2048 React App
+# 2048 React App
 
-## &emsp;&emsp;&emsp;&nbsp; A 2048 game application made with React.
+## A 2048 game application made with React.
 
  &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://imgur.com/Dc3lhmO.gif" width="500" height="319" />
 
